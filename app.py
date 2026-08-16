@@ -13,7 +13,7 @@ else:
 
     if st.button("Generate New Story"):
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o-mini",
             messages=[{"role": "user", "content": "Write a short, simple, 5-sentence story for a 7-year-old child to practice reading."}]
         )
         st.session_state['story'] = response.choices[0].message.content
