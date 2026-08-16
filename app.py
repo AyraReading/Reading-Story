@@ -13,7 +13,7 @@ if api_key:
         if st.button("Generate New Story"):
             with st.spinner("Generating story..."):
                 response = client.models.generate_content(
-                    model='gemini-1.5-flash',
+                    model='gemini-1.5-flash-8b',
                     contents='Write a short, simple, 5-sentence story for a child learning to read.'
                 )
                 st.session_state['story'] = response.text
